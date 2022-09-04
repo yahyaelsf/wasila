@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -47,11 +48,11 @@ class AdminController extends Controller
             $admin = new Admin();
             $admin->name = $request->get('name');
             $admin->email = $request->get('email');
-            $admin->password = $request->get('password');
+            $admin->password = Hash::make($request->get('password'));
             $is_saved = $admin->save();
             return response()->json(
                 [
-                    'message' => $is_saved ? 'تم إنشاء المسؤول بنجاح' : 'فشل في إنشاء المنتج '
+                    'message' => $is_saved ? 'تم إنشاء المسؤول بنجاح' : 'فشل في إنشاء المسؤول '
                 ],
                 $is_saved ? Response::HTTP_OK : Response::HTTP_BAD_REQUEST
 
@@ -128,7 +129,7 @@ class AdminController extends Controller
         return response()->json(
             [
                 'icon' => $is_deleted ? 'success' : 'danger',
-                'title' => $is_deleted ? 'تم حذف المسؤول بنجاح' : 'فشل في حذف المنتج',
+                'title' => $is_deleted ? 'تم حذف المسؤول بنجاح' : 'فشل في حذف المسؤول',
             ],
             $is_deleted ? Response::HTTP_OK : Response::HTTP_BAD_REQUEST
         );

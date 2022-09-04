@@ -1,5 +1,5 @@
 @extends('cms.parent')
-@section('title', 'Edit Admin')
+@section('title', 'تعديل المسؤول')
 @section('content')
     <div class="container-fluid">
         <div class="row">

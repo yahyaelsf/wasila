@@ -1,11 +1,11 @@
 @extends('cms.parent')
-@section('title', 'مقدمين الخدمات')
+@section('title', 'المستخدمين')
 @section('content')
 
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title float-left">جدول مقدمين الخدمات</h3>
+                    <h3 class="card-title float-left">جدول المستخدمين</h3>
                 </div>
 
                 <!-- /.card-header -->
@@ -14,31 +14,27 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>إسم مقدم الخدمة</th>
-                                <th>إيميل مقدم الخدمة</th>
-                                <th>هاتف مقدم الخدمة</th>
-                                <th>عنوان مقدم الخدمة</th>
+                                <th>إسم المستخدم</th>
+                                <th>إيميل المستخدم</th>
                                 <th>تاريخ الإنشاء</th>
                                 <th>تاريخ التعديل</th>
                                 <th>الإعدادات</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data as $service)
+                            @foreach ($data as $user)
                                 <tr>
-                                    <td>{{ $service->id }}</td>
-                                    <td>{{ $service->name }}</td>
-                                    <td>{{ $service->email }}</td>
-                                    <td>{{ $service->phone }}</td>
-                                    <td>{{ $service->address }}</td>
-                                    <td>{{ $service->created_at }}</td>
-                                    <td>{{ $service->updated_at }}</td>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->created_at }}</td>
+                                    <td>{{ $user->updated_at }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ route('services.edit', $service->id) }}" class="btn btn-info">
+                                            {{-- <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">
                                                 <i class="fas fa-edit"></i>
-                                            </a>
-                                            <a onclick="destroy({{ $service->id }},this , '/cms/services/')" class="btn btn-danger">
+                                            </a> --}}
+                                            <a onclick="destroy({{ $user->id }},this , '/cms/users/')" class="btn btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>

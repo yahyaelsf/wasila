@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/bootstrap-rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('cms/plugins/toastr/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('cms/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
 
-    <title>  تسجيل دخول : وسيلة</title>
+    <title> تسجيل دخول : وسيلة</title>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -35,8 +37,8 @@
 
 
                         <a class="navbar-brand navbar-left" href="#">Wasilla <span>Shop</span> <img
-                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}" alt=""
-                                class="img-responive"></a>
+                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}"
+                                alt="" class="img-responive"></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
 
@@ -83,14 +85,15 @@
                 <div class="col-lg-8 col-xs-12">
                     <div class="box-page-2">
 
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method="POST">
+                            @csrf
                             <h3>وسيلة تسجيل دخول</h3>
                             <div class="form-group form-right">
                                 <label for="inputEmail3" class="col-sm-2 control-label logo-form"><i
                                         class="glyphicon glyphicon-user
                   "></i></label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control input-page-2" id="inputEmail3">
+                                    <input type="email" class="form-control input-page-2" name="email"  id="email">
                                 </div>
                             </div>
                             <div class="form-group form-right ">
@@ -98,7 +101,7 @@
                                         class="glyphicon glyphicon-lock
                   "></i></label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control input-page-2" id="inputPassword3">
+                                    <input type="password" class="form-control input-page-2" name="password" id="password">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -113,8 +116,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10 last-form">
-                                    <button type="submit" class="btn btn-default button-sec-2-page-2"><a
-                                            href="index4.html">دخول</a></button>
+                                    <button type="button" onclick="login()"
+                                        class="btn btn-default button-sec-2-page-2">دخول</button>
                                     <button type="submit"
                                         class="btn btn-default button-sec-2-page-2 button-sec-2-page-2-2"><a
                                             href="index4.html">مزود خدمة</a></button>
@@ -128,8 +131,8 @@
                                 </div>
                             </div>
                         </form>
-                        <img src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}" class="img-responive"
-                            alt="">
+                        <img src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}"
+                            class="img-responive" alt="">
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
@@ -150,8 +153,8 @@
 
 
                         <a class="navbar-brand navbar-left wasila-right" href="#">Wasilla <span>Shop</span> <img
-                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}" alt=""
-                                class="img-responive"></a>
+                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}"
+                                alt="" class="img-responive"></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -178,10 +181,29 @@
     </section>
     <!-- end section-3 page2 -->
 
-
     <script src="{{ asset('front/js/jquery.js') }}"></script>
     <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('front/js/custom.js') }}"></script>
+    <script src="{{ asset('js/axios.js') }}"></script>
+    <script src="{{ asset('cms/plugins/toastr/toastr.min.js') }}"></script>
+    <script>
+        function login() {
+            axios.post('/front/login', {
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            }).then(function(response) {
+                // handle success
+                console.log(response);
+                // toastr.success(response.data.message)
+                // document.getElementById('reset-form').reset();
+                window.location.href = '/front/products';
+            }).catch(function(error) {
+                // handle error
+                console.log(error);
+                toastr.error(error.response.data.message)
+            })
+        }
+    </script>
 </body>
 
 </html>

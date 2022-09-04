@@ -31,7 +31,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                             <li><a href="{{ route('user.profile') }}"><img src="{{ asset('front/image/‏‏NoPath - نسخة (2).png') }}" alt=""></a></li>
+                            <li><a href="{{ route('user.profile') }}"><img src="{{ asset('front/image/‏‏NoPath - نسخة (2).png') }}" alt=""></a></li>
                             <li><a href="{{ route('favorite') }}">المفضلة</a></li>
                             <li><a href="{{ route('card') }}">سلتي</a></li>
                             <li><a href="{{ route('chefs') }}">اصحاب الخدمة</a></li>
@@ -142,11 +142,14 @@
 </section>
 <section class="sec-2-page-4">
     <div class="container">
-        <div class="row">
+      <div class="row">
             <div class="col-lg-3 col-xs-3 height-box">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive"></div>
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt=""
+                                class="img-responive" />
+                        </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
                             <p class="p1">15$</p>
@@ -170,7 +173,8 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive"
+                                alt="" />
                         </div>
                     </div>
                 </div>
@@ -178,7 +182,9 @@
             <div class="col-lg-3 col-xs-3 height-box">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt=""
+                                class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -194,7 +200,6 @@
                                 <i class="fas fa-star star1"></i>
                                 <i class="fas fa-star star1"></i>
                             </div>
-
                         </div>
                         <div class="last-text-box-page-4">
                             <div class="disflex">
@@ -204,7 +209,8 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive"
+                                alt="" />
                         </div>
                     </div>
                 </div>
@@ -212,7 +218,9 @@
             <div class="col-lg-3 col-xs-3 height-box">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt=""
+                                class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -237,7 +245,8 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive"
+                                alt="" />
                         </div>
                     </div>
                 </div>
@@ -245,7 +254,9 @@
             <div class="col-lg-3 col-xs-3 height-box">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt=""
+                                class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -270,152 +281,19 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-xs-3 height-box">
-                <div class="boxs-section2-page-4">
-                    <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
-                        </div>
-                        <div class="textArea">
-                            <i class="fas fa-heart"></i>
-                            <p class="p1">15$</p>
-                            <p>برجر</p>
-                        </div>
-                        <div class="textarea2">
-                            <p>مشاهدة 35</p>
-                            <div class="star">
-                                <i class="fas fa-star star0"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                            </div>
-                        </div>
-                        <div class="last-text-box-page-4">
-                            <div class="disflex">
-                                <p>10-20</p>
-                                <i class="far fa-clock times"></i>
-                            </div>
-                            <div class="shef">
-                                <p>منال</p>
-                            </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-xs-3 height-box">
-                <div class="boxs-section2-page-4">
-                    <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
-                        </div>
-                        <div class="textArea">
-                            <i class="fas fa-heart"></i>
-                            <p class="p1">15$</p>
-                            <p>برجر</p>
-                        </div>
-                        <div class="textarea2">
-                            <p>مشاهدة 35</p>
-                            <div class="star">
-                                <i class="fas fa-star star0"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                            </div>
-
-                        </div>
-                        <div class="last-text-box-page-4">
-                            <div class="disflex">
-                                <p>10-20</p>
-                                <i class="far fa-clock times"></i>
-                            </div>
-                            <div class="shef">
-                                <p>منال</p>
-                            </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-xs-3 height-box">
-                <div class="boxs-section2-page-4">
-                    <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
-                        </div>
-                        <div class="textArea">
-                            <i class="fas fa-heart"></i>
-                            <p class="p1">15$</p>
-                            <p>برجر</p>
-                        </div>
-                        <div class="textarea2">
-                            <p>مشاهدة 35</p>
-                            <div class="star">
-                                <i class="fas fa-star star0"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                            </div>
-                        </div>
-                        <div class="last-text-box-page-4">
-                            <div class="disflex">
-                                <p>10-20</p>
-                                <i class="far fa-clock times"></i>
-                            </div>
-                            <div class="shef">
-                                <p>منال</p>
-                            </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-xs-3 height-box">
-                <div class="boxs-section2-page-4">
-                    <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
-                        </div>
-                        <div class="textArea">
-                            <i class="fas fa-heart"></i>
-                            <p class="p1">15$</p>
-                            <p>برجر</p>
-                        </div>
-                        <div class="textarea2">
-                            <p>مشاهدة 35</p>
-                            <div class="star">
-                                <i class="fas fa-star star0"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                                <i class="fas fa-star star1"></i>
-                            </div>
-                        </div>
-                        <div class="last-text-box-page-4">
-                            <div class="disflex">
-                                <p>10-20</p>
-                                <i class="far fa-clock times"></i>
-                            </div>
-                            <div class="shef">
-                                <p>منال</p>
-                            </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive"
+                                alt="" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-xs-3 height-box">
+            <div class="col-lg-3 col-xs-3">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt="" class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -440,15 +318,16 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-xs-3 height-box">
+            <div class="col-lg-3 col-xs-3">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt="" class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -464,7 +343,6 @@
                                 <i class="fas fa-star star1"></i>
                                 <i class="fas fa-star star1"></i>
                             </div>
-
                         </div>
                         <div class="last-text-box-page-4">
                             <div class="disflex">
@@ -474,15 +352,16 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-xs-3 height-box">
+            <div class="col-lg-3 col-xs-3">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt="" class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -507,15 +386,16 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-xs-3 height-box">
+            <div class="col-lg-3 col-xs-3">
                 <div class="boxs-section2-page-4">
                     <div class="box">
-                        <div class="imgIcon"><img src="image/Image -56.png" alt="" class="img-responive">
+                        <div class="imgIcon">
+                            <img src="{{ asset('front/image/Image -56.png') }}" alt="" class="img-responive" />
                         </div>
                         <div class="textArea">
                             <i class="fas fa-heart"></i>
@@ -540,7 +420,7 @@
                             <div class="shef">
                                 <p>منال</p>
                             </div>
-                            <img src="image/‏‏NoPath - نسخة (7).png" class="img-responive" alt="">
+                            <img src="{{ asset('front/image/‏‏NoPath - نسخة (7).png') }}" class="img-responive" alt="" />
                         </div>
                     </div>
                 </div>
@@ -550,3 +430,4 @@
 </section>
 
 @extends('front.footer')
+

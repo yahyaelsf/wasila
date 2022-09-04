@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/bootstrap-rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('cms/plugins/toastr/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('cms/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
 
     <title> وسيلة : إنشاء حساب </title>
 
@@ -36,8 +38,8 @@
 
 
                         <a class="navbar-brand navbar-left" href="#">Wasilla <span>Shop</span> <img
-                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}" alt=""
-                                class="img-responive"></a>
+                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}"
+                                alt="" class="img-responive"></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
 
@@ -81,40 +83,42 @@
                 <div class="col-lg-8 col-xs-12">
                     <div class="box-page-2">
 
-                        <form class="form-horizontal">
-                            <h3>وسيلة  إنشاء حساب</h3>
+                        <form class="form-horizontal" method="POST">
+                            @csrf
+                            <h3>وسيلة إنشاء حساب</h3>
                             <div class="form-group form-right">
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control input-page-2" id="inputText3"
+                                    <input type="text" class="form-control input-page-2" id="name"
                                         placeholder="الاسم كامل">
                                 </div>
                             </div>
                             <div class="form-group form-right ">
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control input-page-2" id="inputEmail3"
+                                    <input type="email" class="form-control input-page-2" id="email"
                                         placeholder="الايميل">
                                 </div>
                             </div>
                             <div class="form-group form-right ">
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control input-page-2" id="inputPassword3"
-                                        placeholder="تأكيد كلمة السر">
+                                    <input type="password" class="form-control input-page-2" id="new_password"
+                                        placeholder=" كلمة السر">
                                 </div>
                             </div>
                             <div class="form-group form-right ">
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control input-page-2" id="inputPassword3"
-                                        placeholder="كلمة السر">
+                                    <input type="password" class="form-control input-page-2"
+                                        id="new_password_confirmation" placeholder="تاكيد كلمة السر">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10 last-form">
-                                    <button type="submit" class="btn btn-default button-sec-2-page-2">تسجيل</button>
+                                    <button type="button" onclick="createItem()"
+                                        class="btn btn-default button-sec-2-page-2">تسجيل</button>
                                 </div>
                             </div>
                         </form>
-                        <img src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}" class="img-responive"
-                            alt="">
+                        <img src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}"
+                            class="img-responive" alt="">
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
@@ -135,8 +139,8 @@
 
 
                         <a class="navbar-brand navbar-left wasila-right" href="#">Wasilla <span>Shop</span> <img
-                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}" alt=""
-                                class="img-responive"></a>
+                                src="{{ asset('front/image/photo_5341306013632019689_y-removebg-preview.png') }}"
+                                alt="" class="img-responive"></a>
                         <!-- Brand and toggle get grouped for better mobile display -->
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -166,6 +170,22 @@
     <script src="{{ asset('front/js/jquery.js') }}"></script>
     <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('front/js/custom.js') }}"></script>
+    <script src="{{ asset('js/axios.js') }}"></script>
+    <script src="{{ asset('cms/plugins/toastr/toastr.min.js') }}"></script>
+    <script src="{{ asset('js/crud.js') }}"></script>
+    <script>
+        function createItem() {
+            let data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                new_password: document.getElementById('new_password').value,
+                new_password_confirmation: document.getElementById('new_password_confirmation').value
+
+            }
+            store('/cms/users', data);
+            window.location.href ='/login'
+        }
+    </script>
 </body>
 
 </html>
